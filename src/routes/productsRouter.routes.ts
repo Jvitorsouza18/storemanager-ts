@@ -1,5 +1,6 @@
 import express from 'express';
 
+import { deleteProductController } from '../integration/ProductsIntegration/DeleteProductIntegration';
 import getAllProductsController from '../integration/ProductsIntegration/GetAllProductsIntegration';
 import { getProductByIdController } from '../integration/ProductsIntegration/GetProductByIdIntegration';
 import { registerProductController } from '../integration/ProductsIntegration/RegisterProduct';
@@ -19,6 +20,9 @@ productRoute
   })
   .put('/products/:id', async (request, response) => {
     return updateProductController.handle(request, response);
+  })
+  .delete('/products/:id', async (request, response) => {
+    return deleteProductController.handle(request, response);
   });
 
 export default productRoute;
