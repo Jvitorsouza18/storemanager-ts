@@ -2,6 +2,7 @@ import express from 'express';
 
 import getAllProductsController from '../integration/ProductsIntegration/GetAllProductsIntegration';
 import { getProductByIdController } from '../integration/ProductsIntegration/GetProductByIdIntegration';
+import { registerProductController } from '../integration/ProductsIntegration/RegisterProduct';
 
 const productRoute = express.Router();
 
@@ -11,6 +12,9 @@ productRoute
   })
   .get('/products/:id', async (request, response) => {
     return getProductByIdController.handle(request, response);
+  })
+  .post('/products', async (request, response) => {
+    return registerProductController.handle(request, response);
   });
 
 export default productRoute;
