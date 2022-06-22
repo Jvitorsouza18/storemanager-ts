@@ -3,6 +3,7 @@ import express from 'express';
 import getAllProductsController from '../integration/ProductsIntegration/GetAllProductsIntegration';
 import { getProductByIdController } from '../integration/ProductsIntegration/GetProductByIdIntegration';
 import { registerProductController } from '../integration/ProductsIntegration/RegisterProduct';
+import { updateProductController } from '../integration/ProductsIntegration/UpdateProductIntegration';
 
 const productRoute = express.Router();
 
@@ -15,6 +16,9 @@ productRoute
   })
   .post('/products', async (request, response) => {
     return registerProductController.handle(request, response);
+  })
+  .put('/products/:id', async (request, response) => {
+    return updateProductController.handle(request, response);
   });
 
 export default productRoute;
