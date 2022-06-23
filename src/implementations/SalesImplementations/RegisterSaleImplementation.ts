@@ -6,7 +6,7 @@ import connection from '../../helpers/connection';
 import { IRegisterSaleRepository } from '../../repositories/SalesRepository/IRegisterSaleRepository';
 
 export class RegisterSaleImpplementation implements IRegisterSaleRepository {
-  async insertSingleSale(sale: IRegisterSale, id: number) {
+  async insertSingleSale(sale: IRegisterSale, id: number): Promise<void> {
     const insertSale =
       'INSERT INTO StoreManager.sales_products (sale_id, product_id, quantity) VALUES (?, ?, ?)';
 
