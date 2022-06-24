@@ -1,5 +1,6 @@
 import express from 'express';
 
+import { deleteSaleController } from '../integration/SalesIntegration/DeleSaleIntegration';
 import getAllSalesController from '../integration/SalesIntegration/GetAllSalesIntegration';
 import { getSaleByIdController } from '../integration/SalesIntegration/GetSalesByIdIntegration';
 import { registerSaleController } from '../integration/SalesIntegration/RegisterSalesIntergration';
@@ -19,6 +20,9 @@ salesRoute
   })
   .put('/sales/:id', async (request, response) => {
     return updateSaleController.handle(request, response);
+  })
+  .delete('/sales/:id', async (request, response) => {
+    return deleteSaleController.handle(request, response);
   });
 
 export default salesRoute;
