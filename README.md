@@ -1,4 +1,4 @@
-# Boas vindas ao repositório do Talker Manager!
+# Boas vindas ao repositório do Store Manager
 
 - TypeScript
 - S.O.L.I.D.
