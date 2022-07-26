@@ -1,4 +1,4 @@
-<h1>:postbox: BLOGS API</h1>
+<h1>:computer: Blogs-API</h1>
 <div>
   <h3>Sobre o projeto</h3>
   <p>Esse é um projeto que simula uma API e um banco de dados para a produção de conteúdo para um blog!</p>
