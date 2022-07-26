@@ -1,4 +1,4 @@
-<h1>:computer: Store-manager</h1>
+<h1>:speaking_head: Store-manager</h1>
 <div>
   <h3>Sobre o projeto</h3>
   <p>Esse é um projeto que simula uma API e um banco de dados para o gerenciamento de uma loja</p>
